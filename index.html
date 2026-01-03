@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-[#dbdbdbff] flex items-center justify-center min-h-screen overflow-x-hidden"
+  >
+    <div
+      class="w-93.75 md:w-150 bg-[#ffffffff] px-9 py-5 rounded-t-2xl rounded-l-2xl rounded-br-[5rem] md:rounded-br-[10rem]"
+    >
+      <!-- input display -->
+      <form action="" class="flex flex-col gap-3 text-[#716f6fff] font-bold">
+        <div class="flex items-center justify-center gap-2 w-[75%]">
+          <div class="flex flex-col items-start justify-center gap-1">
+            <label for="day" class="labels text-[0.8rem]">DAY</label>
+            <input
+              type="number"
+              placeholder="DD"
+              id="numberInput"
+              class="inputs border border-[#dbdbdbff] rounded-[0.3rem] w-full py-2 pl-2 text-xl md:text-[1.5rem] text-black focus:ring-1 focus:ring-[#854dffff] focus:outline-none focus:border-[#854dffff]"
+            />
+
+            <small
+              class="md:text-[0.7rem] text-xs text-[#ff5757ff] hidden"
+              id="show--error"
+            ></small>
+          </div>
+
+          <div class="flex flex-col items-start justify-center gap-1">
+            <label for="month" class="labels text-[0.8rem]">MONTH</label>
+            <input
+              type="number"
+              placeholder="MM"
+              id="monthInput"
+              class="inputs border border-[#dbdbdbff] rounded-[0.3rem] py-2 pl-2 w-full text-xl text-[1.3rem] text-black focus:ring-1 focus:ring-[#854dffff] focus:outline-none focus:border-[#854dffff]"
+            />
+            <small
+              class="text-[0.8rem] text-[#ff5757ff] hidden"
+              id="show--error"
+            ></small>
+          </div>
+
+          <div class="flex flex-col items-start justify-center gap-1">
+            <label for="year" class="labels text-[0.8rem]">YEAR</label>
+            <input
+              type="number"
+              placeholder="YYYY"
+              id="yearInput"
+              class="inputs border border-[#dbdbdbff] rounded-[0.3rem] py-2 pl-2 w-full text-xl text-[1.3rem] text-black focus:ring-1 focus:ring-[#854dffff] focus:outline-none focus:border-[#854dffff]"
+            />
+            <small
+              class="text-[0.8rem] text-[#ff5757ff] hidden"
+              id="show--error"
+            ></small>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="relative flex items-center justify-center md:justify-end">
+          <div class="absolute w-full h-px bg-[#dbdbdbff] top-1/2"></div>
+          <button
+            id="imgButton"
+            class="z-10 bg-[#854dffff] rounded-[3rem] p-4 md:p-6 transition-colors duration-300 hover:bg-black cursor-pointer"
+          >
+            <img
+              src="assets/images/icon-arrow.svg"
+              alt="arrow down icon"
+              class="w-6 md:w-10"
+            />
+          </button>
+        </div>
+      </form>
+
+      <!-- output display -->
+      <div
+        class="flex flex-col items-start justify-center leading-[1.05] font-bold text-[3rem] md:text-[5rem]"
+      >
+        <h1 class="">
+          <span id="yearOutput" class="text-[#854dffff]">--</span>years
+        </h1>
+        <h1 class="">
+          <span id="monthOutput" class="text-[#854dffff]">--</span>months
+        </h1>
+        <h1 class="">
+          <span id="daysOutput" class="text-[#854dffff]">--</span>days
+        </h1>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
